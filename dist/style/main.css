@@ -104,42 +104,47 @@ nav {
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  /* The side navigation menu */
+  nav {
+    position: fixed;
+    width: 100%;
+  }
+  .logo {
+    margin-left: 3rem;
+  }
   .sidebar {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: #f1f1f160;
     position: fixed;
     height: 100%;
-    overflow: auto;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  /* Sidebar links */
   .sidebar .nav-links {
     display: block;
-    color: black;
-    padding: 16px;
+    color: rgb(13, 81, 121);
+    padding: 1.2rem;
     text-decoration: none;
+    font-size: 1.2rem;
   }
 
-  /* Active/current link */
-  .sidebar a.huidig {
-    background-color: #4caf50;
-    color: white;
+  .sidebar .huidig {
+    text-decoration: underline;
+    text-decoration-style: double;
   }
 
-  /* Links on mouse-over */
   .sidebar a:hover:not(.huidig) {
-    background-color: #555;
-    color: white;
+    text-decoration: underline;
   }
 
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
   div.content {
     margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
+    padding: 8vh 1rem 0 1rem;
   }
 }
 
