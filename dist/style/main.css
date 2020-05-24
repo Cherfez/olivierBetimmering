@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  min-height: 8vh;
+  background-color: rgb(13, 81, 121);
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(193, 231, 248, 0.904);
+  font-size: 24px;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.sidebar {
+  list-style-type: none;
+  display: none;
+  margin-top: 1rem;
+}
+
+.sidebar li {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.sidebar .nav-links {
+  text-decoration: none;
+  color: rgb(13, 81, 121);
+  font-weight: 500;
+}
+
+.active {
+  display: block;
+  background-color: rgba(193, 231, 248, 0.904);
+}
+
+@media (min-width: 575.98px) {
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  /* The side navigation menu */
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    /* background-color: #f1f1f1; */
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  /* Active/current link */
+  .sidebar a.huidig {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.huidig) {
+    background-color: #555;
+    color: white;
+  }
+
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+}
