@@ -58,7 +58,38 @@ nav {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
   .sidebar {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .sidebar li {
+    margin: 0;
+    padding: 0 0.5rem;
+  }
+
+  .sidebar .nav-links {
+    margin: 0 1rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+  }
+
+  /* .sidebar {
     width: 100%;
     height: auto;
     position: relative;
@@ -68,7 +99,7 @@ nav {
   }
   div.content {
     margin-left: 0;
-  }
+  } */
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -78,14 +109,14 @@ nav {
     margin: 0;
     padding: 0;
     width: 200px;
-    /* background-color: #f1f1f1; */
+    background-color: #f1f1f1;
     position: fixed;
     height: 100%;
     overflow: auto;
   }
 
   /* Sidebar links */
-  .sidebar a {
+  .sidebar .nav-links {
     display: block;
     color: black;
     padding: 16px;
