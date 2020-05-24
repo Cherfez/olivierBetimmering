@@ -50,7 +50,7 @@ nav {
 
 .active {
   display: block;
-  background-color: rgba(193, 231, 248, 0.904);
+  background-color: rgba(241, 250, 255, 0.904);
 }
 
 @media (min-width: 575.98px) {
@@ -88,18 +88,6 @@ nav {
     padding: 1rem 0.5rem;
     color: #fff;
   }
-
-  /* .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {
-    float: left;
-  }
-  div.content {
-    margin-left: 0;
-  } */
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -141,7 +129,6 @@ nav {
     text-decoration: underline;
   }
 
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
   div.content {
     margin-left: 200px;
     padding: 8vh 1rem 0 1rem;
