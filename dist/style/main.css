@@ -48,9 +48,80 @@ nav {
   font-weight: 500;
 }
 
+.sidebar .huidig {
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+.sidebar a:hover:not(.huidig) {
+  text-decoration: underline;
+}
+
 .active {
   display: block;
   background-color: rgba(241, 250, 255, 0.904);
+}
+
+/* homepage */
+#homepage {
+  margin: 1.2rem 1.5rem 0 1.5rem;
+  text-align: center;
+}
+
+#homepage h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+#homepage img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#homepage .intro,
+#homepage .garantie {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#homepage .offerte {
+  height: auto;
+  background-color: rgba(13, 81, 121, 0.123);
+  padding: 1.2rem 1rem;
+  line-height: 1.5rem;
+  margin: 0 -1.5rem;
+}
+
+#homepage .offerte button {
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  background-color: rgb(13, 81, 121);
+  border: solid 1px rgb(13, 81, 121);
+  border-radius: 5px;
+  color: rgba(193, 231, 248, 0.904);
+  letter-spacing: 0.1rem;
+}
+
+#homepage footer {
+  background-color: rgb(13, 81, 121);
+  color: rgba(193, 231, 248, 0.904);
+  margin: 0 -1.5rem;
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+#homepage footer a {
+  color: rgba(193, 231, 248, 0.904);
+  text-decoration: none;
+}
+
+#homepage footer i {
+  padding-right: 0.2rem;
+}
+
+#homepage footer .cherfez {
+  padding-top: 1rem;
 }
 
 @media (min-width: 575.98px) {
@@ -87,6 +158,10 @@ nav {
     margin: 0 1rem;
     padding: 1rem 0.5rem;
     color: #fff;
+  }
+
+  .active {
+    background-color: transparent;
   }
 }
 
@@ -129,9 +204,16 @@ nav {
     text-decoration: underline;
   }
 
-  div.content {
+  .content {
     margin-left: 200px;
     padding: 8vh 1rem 0 1rem;
+    height: calc(100vh - 20vh);
+  }
+
+  footer {
+    margin-left: 200px;
+    height: 20vh;
+    background-color: rgb(13, 81, 121);
   }
 }
 
