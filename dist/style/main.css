@@ -6,7 +6,11 @@
 
 body {
   background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Roboto Mono", monospace; */
+  /* font-family: "Roboto Slab", serif; */
+  /* font-family: "Abel", sans-serif; */
+  font-family: "Rajdhani", sans-serif;
 }
 
 nav {
@@ -48,12 +52,99 @@ nav {
   font-weight: 500;
 }
 
+.sidebar .huidig {
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+.sidebar a:hover:not(.huidig) {
+  text-decoration: underline;
+}
+
 .active {
   display: block;
   background-color: rgba(241, 250, 255, 0.904);
 }
 
+/* homepage */
+#homepage {
+  margin: 1.2rem 1.5rem 0 1.5rem;
+  text-align: center;
+}
+
+#homepage .smaller-device {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+#homepage .big-device {
+  display: none;
+}
+
+#homepage .small {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#homepage .big,
+#homepage .area-1 img {
+  display: none;
+}
+
+#homepage .intro,
+#homepage .garantie {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#homepage .offerte {
+  height: auto;
+  /* background-color: rgba(13, 81, 121, 0.123); */
+  background-color: rgba(13, 81, 121, 0.068);
+  padding: 1.2rem 1rem;
+  line-height: 1.5rem;
+  margin: 0 -1.5rem;
+}
+
+#homepage .offerte button {
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  background-color: rgb(13, 81, 121);
+  border: solid 1px rgb(13, 81, 121);
+  border-radius: 5px;
+  color: rgba(193, 231, 248, 0.904);
+  letter-spacing: 0.1rem;
+}
+
+footer {
+  background-color: rgb(13, 81, 121);
+  color: rgba(193, 231, 248, 0.904);
+  margin: 0 -1.5rem;
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+footer a {
+  color: rgba(193, 231, 248, 0.904);
+  text-decoration: none;
+}
+
+footer i {
+  padding-right: 0.2rem;
+}
+
+footer .cherfez {
+  padding-top: 1rem;
+}
+
 @media (min-width: 575.98px) {
+  #homepage h1 {
+    margin-top: 1.75rem;
+  }
+
+  #homepage .intro,
+  #homepage .garantie {
+    padding: 0 1.2rem 1rem 1.2rem;
+  }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -88,13 +179,65 @@ nav {
     padding: 1rem 0.5rem;
     color: #fff;
   }
+
+  .active {
+    background-color: transparent;
+  }
+
+  #homepage .area-1,
+  #homepage .area-2 {
+    display: flex;
+  }
+  #homepage .area-1 img,
+  #homepage .area-2 .big {
+    display: block;
+    width: 50%;
+  }
+  #homepage .area-2 .small {
+    display: none;
+  }
+  #homepage .area-1 .intro,
+  #homepage .area-2 .garantie {
+    align-self: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  #homepage .offerte {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+
+  #homepage .offerte button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "adres adres contact contact"
+      ". cherfez cherfez .";
+  }
+
+  footer .adres {
+    grid-area: adres;
+  }
+  footer .contact {
+    grid-area: contact;
+  }
+  footer .cherfez {
+    grid-area: cherfez;
+  }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   nav {
     position: fixed;
-    width: 100%;
+    width: 100vw;
   }
   .logo {
     margin-left: 3rem;
@@ -129,12 +272,70 @@ nav {
     text-decoration: underline;
   }
 
-  div.content {
+  .content {
     margin-left: 200px;
     padding: 8vh 1rem 0 1rem;
+    height: 100%;
+  }
+
+  #homepage {
+    margin: 0;
+  }
+  #homepage .smaller-device {
+    display: none;
+  }
+  #homepage .big-device {
+    display: inline-block;
+    padding-bottom: 10%;
+  }
+  #homepage .area-1 img {
+    margin-top: 1rem;
+  }
+
+  #homepage .offerte {
+    margin: 2rem -1rem 0 -1rem;
+  }
+
+  footer {
+    width: calc(100vw - 200px);
+    margin-left: 200px;
+    padding-left: 0;
+    height: 15vh;
+    background-color: rgb(13, 81, 121);
   }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+  #homepage .content .area-1 p,
+  #homepage .content .area-2 p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+  }
+  #homepage .garantie h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  #homepage .offerte {
+    font-size: 1.2rem;
+  }
+  #homepage .offerte p {
+    line-height: 1.9rem;
+    padding: 0.75rem;
+  }
+  #homepage .offerte button {
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+
+  footer {
+    height: 10%;
+    width: calc(100vw - 200px - 1rem);
+    padding-top: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
 }
