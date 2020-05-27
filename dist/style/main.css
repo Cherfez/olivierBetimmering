@@ -68,7 +68,8 @@ nav {
 
 /* homepage */
 #homepage,
-#interieur {
+#interieur,
+#exterieur {
   margin: 1.2rem 1.5rem 0 1.5rem;
   text-align: center;
 }
@@ -92,7 +93,8 @@ nav {
 
 #homepage .intro,
 #homepage .garantie,
-#interieur .intro {
+#interieur .intro,
+#exterieur .intro {
   line-height: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -116,12 +118,14 @@ nav {
   letter-spacing: 0.1rem;
 }
 
-/* interieur page */
-#interieur .interieur-fotos {
+/* interieur/exterieur page */
+#interieur .interieur-fotos,
+#exterieur .exterieur-fotos {
   display: flex;
   flex-direction: column;
 }
-#interieur .interieur-fotos img {
+#interieur .interieur-fotos img,
+#exterieur .exterieur-fotos img {
   width: 100%;
   margin: 1rem 0;
 }
@@ -230,22 +234,26 @@ footer .cherfez {
 
 @media (min-width: 575.98px) {
   #homepage h1,
-  #interieur h1 {
+  #interieur h1,
+  #exterieur h1 {
     margin-top: 1.75rem;
   }
 
   #homepage .intro,
   #interieur .intro,
+  #exterieur .intro,
   #homepage .garantie {
     padding: 0 1.2rem 1rem 1.2rem;
   }
 
-  #interieur .interieur-fotos {
+  #interieur .interieur-fotos,
+  #exterieur .exterieur-fotos {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  #interieur .interieur-fotos img {
+  #interieur .interieur-fotos img,
+  #exterieur .exterieur-fotos img {
     width: 45%;
     margin: 1rem 0.5rem;
   }
@@ -308,7 +316,8 @@ footer .cherfez {
   }
 
   /*interieur*/
-  #interieur .interieur-fotos img {
+  #interieur .interieur-fotos img,
+  #exterieur .exterieur-fotos img {
     width: 30%;
   }
 
@@ -388,7 +397,8 @@ footer .cherfez {
   }
 
   #homepage,
-  #interieur {
+  #interieur,
+  #exterieur {
     margin: 0;
   }
   #homepage .smaller-device {
