@@ -101,6 +101,10 @@ nav {
   margin-bottom: 1rem;
 }
 
+#homepage .garantie h3 {
+  padding-bottom: 0.5rem;
+}
+
 .offerte {
   height: auto;
   /* background-color: rgba(13, 81, 121, 0.123); */
@@ -121,6 +125,12 @@ nav {
 }
 
 /* interieur/exterieur page */
+#interieur h1,
+#exterieur h1,
+#specials h1 {
+  padding-bottom: 1rem;
+}
+
 #interieur .interieur-fotos,
 #exterieur .exterieur-fotos,
 #specials .specials-fotos {
@@ -322,6 +332,9 @@ footer .cherfez {
     padding: 1rem;
     font-size: 1.1rem;
   }
+  #homepage .garantie h3 {
+    padding-bottom: 1rem;
+  }
 
   /*interieur*/
   #interieur .interieur-fotos img,
@@ -449,7 +462,6 @@ footer .cherfez {
   }
   #homepage .garantie h3 {
     font-size: 1.5rem;
-    padding-bottom: 1rem;
   }
   .offerte {
     font-size: 1.2rem;
