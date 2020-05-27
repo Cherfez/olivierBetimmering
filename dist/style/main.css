@@ -70,7 +70,8 @@ nav {
 #homepage,
 #interieur,
 #exterieur,
-#specials {
+#specials,
+#contact {
   margin: 1.2rem 1.5rem 0 1.5rem;
   text-align: center;
 }
@@ -96,7 +97,8 @@ nav {
 #homepage .garantie,
 #interieur .intro,
 #exterieur .intro,
-#specials .intro {
+#specials .intro,
+#contact .intro {
   line-height: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -224,6 +226,14 @@ nav {
 }
 /**/
 
+#contact h1 {
+  padding-bottom: 1rem;
+}
+
+#contact .content {
+  height: calc(100vh - 10vh - 150px);
+}
+
 footer {
   background-color: rgb(13, 81, 121);
   color: rgba(193, 231, 248, 0.904);
@@ -250,7 +260,8 @@ footer .cherfez {
   #homepage h1,
   #interieur h1,
   #exterieur h1,
-  #specials h1 {
+  #specials h1,
+  #contact h1 {
     margin-top: 1.75rem;
   }
 
@@ -258,7 +269,8 @@ footer .cherfez {
   #interieur .intro,
   #exterieur .intro,
   #homepage .garantie,
-  #specials .intro {
+  #specials .intro,
+  #contact .intro {
     padding: 0 1.2rem 1rem 1.2rem;
   }
 
@@ -421,7 +433,8 @@ footer .cherfez {
   #homepage,
   #interieur,
   #exterieur,
-  #specials {
+  #specials,
+  #contact {
     margin: 0;
   }
   #homepage .smaller-device {
