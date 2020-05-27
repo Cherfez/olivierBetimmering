@@ -72,9 +72,12 @@ nav {
   text-align: center;
 }
 
-#homepage h1 {
+#homepage .smaller-device {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+}
+#homepage .big-device {
+  display: none;
 }
 
 #homepage .small {
@@ -197,15 +200,17 @@ footer .cherfez {
   #homepage .area-2 .garantie {
     align-self: center;
     padding: 1rem;
+    font-size: 1.1rem;
   }
 
   #homepage .offerte {
     margin-top: 2rem;
+    font-size: 1.1rem;
   }
 
   #homepage .offerte button {
     padding: 0.6rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   footer {
@@ -232,7 +237,7 @@ footer .cherfez {
 @media (min-width: 992px) {
   nav {
     position: fixed;
-    width: 100%;
+    width: 100vw;
   }
   .logo {
     margin-left: 3rem;
@@ -270,16 +275,67 @@ footer .cherfez {
   .content {
     margin-left: 200px;
     padding: 8vh 1rem 0 1rem;
-    height: calc(100vh - 20vh);
+    height: 100%;
+  }
+
+  #homepage {
+    margin: 0;
+  }
+  #homepage .smaller-device {
+    display: none;
+  }
+  #homepage .big-device {
+    display: inline-block;
+    padding-bottom: 10%;
+  }
+  #homepage .area-1 img {
+    margin-top: 1rem;
+  }
+
+  #homepage .offerte {
+    margin: 2rem -1rem 0 -1rem;
   }
 
   footer {
+    width: calc(100vw - 200px);
     margin-left: 200px;
-    height: 20vh;
+    padding-left: 0;
+    height: 15vh;
     background-color: rgb(13, 81, 121);
   }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+  #homepage .content .area-1 p,
+  #homepage .content .area-2 p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding: 1rem 2rem;
+  }
+  #homepage .garantie h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  #homepage .offerte {
+    font-size: 1.2rem;
+  }
+  #homepage .offerte p {
+    line-height: 1.9rem;
+    padding: 0.75rem;
+  }
+  #homepage .offerte button {
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+
+  footer {
+    height: 10%;
+    width: calc(100vw - 200px - 1rem);
+    padding-top: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
 }
