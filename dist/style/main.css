@@ -67,7 +67,8 @@ nav {
 }
 
 /* homepage */
-#homepage {
+#homepage,
+#interieur {
   margin: 1.2rem 1.5rem 0 1.5rem;
   text-align: center;
 }
@@ -90,12 +91,13 @@ nav {
 }
 
 #homepage .intro,
-#homepage .garantie {
+#homepage .garantie,
+#interieur .intro {
   line-height: 1.5rem;
   margin-bottom: 1rem;
 }
 
-#homepage .offerte {
+.offerte {
   height: auto;
   /* background-color: rgba(13, 81, 121, 0.123); */
   background-color: rgba(13, 81, 121, 0.068);
@@ -104,7 +106,7 @@ nav {
   margin: 0 -1.5rem;
 }
 
-#homepage .offerte button {
+.offerte button {
   padding: 0.5rem;
   margin-top: 0.75rem;
   background-color: rgb(13, 81, 121);
@@ -113,6 +115,96 @@ nav {
   color: rgba(193, 231, 248, 0.904);
   letter-spacing: 0.1rem;
 }
+
+/* interieur page */
+#interieur .interieur-fotos {
+  display: flex;
+  flex-direction: column;
+}
+#interieur .interieur-fotos img {
+  width: 100%;
+  margin: 1rem 0;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/**/
 
 footer {
   background-color: rgb(13, 81, 121);
@@ -137,13 +229,25 @@ footer .cherfez {
 }
 
 @media (min-width: 575.98px) {
-  #homepage h1 {
+  #homepage h1,
+  #interieur h1 {
     margin-top: 1.75rem;
   }
 
   #homepage .intro,
+  #interieur .intro,
   #homepage .garantie {
     padding: 0 1.2rem 1rem 1.2rem;
+  }
+
+  #interieur .interieur-fotos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #interieur .interieur-fotos img {
+    width: 45%;
+    margin: 1rem 0.5rem;
   }
 }
 
@@ -203,12 +307,17 @@ footer .cherfez {
     font-size: 1.1rem;
   }
 
-  #homepage .offerte {
+  /*interieur*/
+  #interieur .interieur-fotos img {
+    width: 30%;
+  }
+
+  .offerte {
     margin-top: 2rem;
     font-size: 1.1rem;
   }
 
-  #homepage .offerte button {
+  .offerte button {
     padding: 0.6rem;
     font-size: 1rem;
   }
@@ -278,7 +387,8 @@ footer .cherfez {
     height: 100%;
   }
 
-  #homepage {
+  #homepage,
+  #interieur {
     margin: 0;
   }
   #homepage .smaller-device {
@@ -292,8 +402,12 @@ footer .cherfez {
     margin-top: 1rem;
   }
 
-  #homepage .offerte {
+  .offerte {
     margin: 2rem -1rem 0 -1rem;
+  }
+  #homepage .content .area-1 p,
+  #homepage .content .area-2 p {
+    text-align: start;
   }
 
   footer {
@@ -317,14 +431,14 @@ footer .cherfez {
     font-size: 1.5rem;
     padding-bottom: 1rem;
   }
-  #homepage .offerte {
+  .offerte {
     font-size: 1.2rem;
   }
-  #homepage .offerte p {
+  .offerte p {
     line-height: 1.9rem;
     padding: 0.75rem;
   }
-  #homepage .offerte button {
+  .offerte button {
     padding: 1rem 1.3rem;
     margin-bottom: 1.1rem;
   }
@@ -338,4 +452,8 @@ footer .cherfez {
 }
 
 @media (min-width: 1400px) {
+  #homepage .content .area-1 p,
+  #homepage .content .area-2 p {
+    padding: 1rem 4rem;
+  }
 }
