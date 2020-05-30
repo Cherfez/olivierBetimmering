@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Olivier Betimmering - Exterieur</title>
+    <title>Olivier Betimmering - Contact</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style/main.css" />
@@ -36,6 +36,43 @@
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- emailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_0E1RjLnlAEwcxdFzJVmTp");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate the contact number value
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              function (response) {
+                //console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                alert(
+                  "Bedankt voor uw email! Wij hebben een kopie naar uw mail gestuurd."
+                );
+              },
+              function (error) {
+                //console.log("FAILED", error);
+                alert(
+                  "Er is iets mis gegaan. Probeer het aub later opnieuw." +
+                    error
+                );
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -55,51 +92,62 @@
         <ul class="sidebar" id="js-menu">
           <li><a class="nav-links" href="index.html">Home</a></li>
           <li><a class="nav-links" href="interieur.html">Interieur</a></li>
-          <li><a class="huidig nav-links" href="#">Exterieur</a></li>
+          <li><a class="nav-links" href="exterieur.html">Exterieur</a></li>
           <li><a class="nav-links" href="speciaal.html">Specials</a></li>
-          <li><a class="nav-links" href="contact.html">Contact</a></li>
+          <li><a class="huidig nav-links" href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main id="exterieur">
+    <main id="contact">
       <div class="content">
-        <h1>Exterieur</h1>
+        <h1>Contact formulier</h1>
 
         <div class="intro">
           <p>
-            Bent u toe aan een een ruimere zolderkamer, een uitbouw of grotere
-            ramen en deuren? <br />
-            Door diverse projecten hebben wij veel ervaring met de uitbreiding
-            van uw huis. <br />
-            Onderstaand vindt u enkele foto's van projecten.
+            Heeft u vragen of wilt u een offerte ontvangen? Vul het contact
+            formulier in en wij komen zo snel mogelijk bij u terug. <br />
           </p>
         </div>
 
-        <div class="exterieur-fotos">
-          <img
-            src="./img/projecten/exterieur/fotoos 00017.jpg"
-            alt="picture1"
-          />
-          <img src="./img/projecten/exterieur/fotoos 001.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 0017.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 0047.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 005.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 010.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 025.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 027.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos 995.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos0 018.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos00 015.jpg" alt="" />
-          <img src="./img/projecten/exterieur/fotoos00 016.jpg" alt="" />
-        </div>
+        <div class="contact-form">
+          <form id="contact-form">
+            <input type="hidden" name="contact_number" />
 
-        <div class="offerte">
-          <p>
-            Geinteresseerd in wat wij voor u kunnen betekenen? <br />
-            Vraag <strong>vrijblijvend</strong> een offerte bij ons aan.
-          </p>
-          <button><a href="contact.html">Aanvragen</a></button>
+            <label>Naam <span>*</span></label>
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Uw naam"
+              pattern="[A-Za-z]+"
+              required
+            />
+
+            <label>Email <span>*</span></label>
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Uw email"
+              required
+            />
+
+            <label>Telefoonnummer <span>*</span></label>
+            <input
+              type="tel"
+              name="user_phone"
+              placeholder="Uw telefoonnummer"
+              pattern="[0-9]{10}"
+              required
+            />
+
+            <label>Bericht</label>
+            <textarea
+              name="message"
+              placeholder="Wat kunnen wij voor u betekenen?"
+            ></textarea>
+
+            <button type="submit" value="send">Verstuur</button>
+          </form>
         </div>
       </div>
 

@@ -70,7 +70,8 @@ nav {
 #homepage,
 #interieur,
 #exterieur,
-#specials {
+#specials,
+#contact {
   margin: 1.2rem 1.5rem 0 1.5rem;
   text-align: center;
 }
@@ -96,7 +97,8 @@ nav {
 #homepage .garantie,
 #interieur .intro,
 #exterieur .intro,
-#specials .intro {
+#specials .intro,
+#contact .intro {
   line-height: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -107,7 +109,6 @@ nav {
 
 .offerte {
   height: auto;
-  /* background-color: rgba(13, 81, 121, 0.123); */
   background-color: rgba(13, 81, 121, 0.068);
   padding: 1.2rem 1rem;
   line-height: 1.5rem;
@@ -115,13 +116,18 @@ nav {
 }
 
 .offerte button {
-  padding: 0.5rem;
   margin-top: 0.75rem;
   background-color: rgb(13, 81, 121);
   border: solid 1px rgb(13, 81, 121);
   border-radius: 5px;
+  width: 8rem;
+  height: 2.5rem;
+}
+.offerte button a {
   color: rgba(193, 231, 248, 0.904);
+  text-decoration: none;
   letter-spacing: 0.1rem;
+  padding: 0.75rem 1.5rem;
 }
 
 /* interieur/exterieur page */
@@ -143,86 +149,48 @@ nav {
   width: 100%;
   margin: 1rem 0;
 }
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+
+#contact .content {
+  min-height: calc(100vh - 8vh);
 }
 
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+#contact h1 {
+  padding-bottom: 1rem;
 }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+#contact form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
 }
 
-/* Add Animation */
-.modal-content,
-#caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+#contact form input {
+  padding: 0.4rem 1rem;
+  margin-bottom: 1rem;
+  font-family: "Rajdhani", sans-serif;
+}
+#contact form label {
+  margin-bottom: 0.3rem;
 }
 
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
+#contact form textarea {
+  height: 20vh;
+  line-height: 1.2rem;
+  padding: 0.4rem 1rem;
+  font: 400 13.3333px "Rajdhani", sans-serif;
 }
 
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
+#contact form button {
+  width: fit-content;
+  margin: 1rem auto;
+  background-color: rgb(13, 81, 121);
+  border: 1px solid rgb(13, 81, 121);
+  color: rgba(193, 231, 248, 0.904);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  display: block;
 }
-/**/
 
 footer {
   background-color: rgb(13, 81, 121);
@@ -250,7 +218,8 @@ footer .cherfez {
   #homepage h1,
   #interieur h1,
   #exterieur h1,
-  #specials h1 {
+  #specials h1,
+  #contact h1 {
     margin-top: 1.75rem;
   }
 
@@ -258,7 +227,8 @@ footer .cherfez {
   #interieur .intro,
   #exterieur .intro,
   #homepage .garantie,
-  #specials .intro {
+  #specials .intro,
+  #contact .intro {
     padding: 0 1.2rem 1rem 1.2rem;
   }
 
@@ -274,6 +244,10 @@ footer .cherfez {
   #specials .specials-fotos img {
     width: 45%;
     margin: 1rem 0.5rem;
+  }
+
+  #contact form {
+    margin: 1rem 4rem;
   }
 }
 
@@ -349,8 +323,29 @@ footer .cherfez {
   }
 
   .offerte button {
-    padding: 0.6rem;
     font-size: 1rem;
+    width: 10rem;
+    height: 3rem;
+  }
+  .offerte button a {
+    padding: 1rem 2rem;
+  }
+
+  #contact form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem 4rem;
+  }
+  #contact form label {
+    width: 30%;
+    text-align: start;
+    margin-bottom: 0;
+  }
+  #contact form input,
+  #contact form textarea {
+    width: 70%;
+    margin-bottom: 1.5rem;
   }
 
   footer {
@@ -421,7 +416,8 @@ footer .cherfez {
   #homepage,
   #interieur,
   #exterieur,
-  #specials {
+  #specials,
+  #contact {
     margin: 0;
   }
   #homepage .smaller-device {
@@ -441,6 +437,14 @@ footer .cherfez {
   #homepage .content .area-1 p,
   #homepage .content .area-2 p {
     text-align: start;
+  }
+
+  #contact form label {
+    font-size: 1.1rem;
+  }
+
+  #contact form input {
+    font-size: 1rem;
   }
 
   footer {
@@ -471,8 +475,14 @@ footer .cherfez {
     padding: 0.75rem;
   }
   .offerte button {
-    padding: 1rem 1.3rem;
     margin-bottom: 1.1rem;
+  }
+
+  #contact form {
+    margin: 2rem 15%;
+  }
+  #contact .content {
+    align-content: space-around;
   }
 
   footer {
@@ -487,5 +497,9 @@ footer .cherfez {
   #homepage .content .area-1 p,
   #homepage .content .area-2 p {
     padding: 1rem 4rem;
+  }
+
+  #contact .content {
+    height: calc(100vh - 10vh);
   }
 }
