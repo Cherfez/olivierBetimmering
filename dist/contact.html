@@ -55,7 +55,21 @@
             event.preventDefault();
             // generate the contact number value
             this.contact_number.value = (Math.random() * 100000) | 0;
-            emailjs.sendForm("contact_service", "contact_form", this);
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              function (response) {
+                //console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                alert(
+                  "Bedankt voor uw email! Wij hebben een kopie naar uw mail gestuurd."
+                );
+              },
+              function (error) {
+                //console.log("FAILED", error);
+                alert(
+                  "Er is iets mis gegaan. Probeer het aub later opnieuw." +
+                    error
+                );
+              }
+            );
           });
       };
     </script>
@@ -91,7 +105,7 @@
 
         <div class="intro">
           <p>
-            Heeft u vragen of wilt u een offerte ontvangen? Vul het onderstaande
+            Heeft u vragen of wilt u een offerte ontvangen? Vul het contact
             formulier in en wij komen zo snel mogelijk bij u terug. <br />
           </p>
         </div>
@@ -105,6 +119,7 @@
               type="text"
               name="user_name"
               placeholder="Uw naam"
+              pattern="[A-Za-z]+"
               required
             />
 
@@ -118,9 +133,10 @@
 
             <label>Telefoonnummer <span>*</span></label>
             <input
-              type="phone"
+              type="tel"
               name="user_phone"
               placeholder="Uw telefoonnummer"
+              pattern="[0-9]{10}"
               required
             />
 
@@ -130,7 +146,7 @@
               placeholder="Wat kunnen wij voor u betekenen?"
             ></textarea>
 
-            <input type="submit" value="Send" />
+            <button type="submit" value="send">Verstuur</button>
           </form>
         </div>
       </div>
